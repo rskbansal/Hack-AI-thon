@@ -1,7 +1,2 @@
-# Hack-AI-thon
-Moveworks Hack-AI-thon
-
-## Tech-stack
-- Python
-- BeautifulSoup
-- requests
+# Haystack-and-Mistral-7B-RAG-Implementation
+Haystack and Mistral 7B RAG Implementation. It is based on completely open-source stack.
