@@ -17,3 +17,5 @@ The LLMs supported  for generation are:
 * [Mistral](https://mistral.ai/)
 * [GPT](https://platform.openai.com/docs/models)
 * [LLama](https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/)
+
+The LM used for generating embeddings is [MiniLM-L6](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
