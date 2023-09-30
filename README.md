@@ -1,6 +1,6 @@
 # Hack-AI-thon
 ##This is a Retrieval Augmented Generation based chatbot
-## The knowledge document was webscraped from a [website](https://www.moveworks.com/) 
+### The knowledge document was webscraped from a [website](https://www.moveworks.com/) 
 
  However a simple script can extend this to any website. 
 
