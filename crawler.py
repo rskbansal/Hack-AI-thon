@@ -13,7 +13,13 @@ def get_content_and_links(url):
     for script in soup(["script", "style"]):
         script.extract()
 
+    #remove headers and footers
+    for header in soup(["header", "footer"]):
+        header.extract()
+
     text = " ".join(soup.stripped_strings)
+
+    
     
     links = []
     for link in soup.find_all('a', href=True):
