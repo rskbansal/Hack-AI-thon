@@ -1,0 +1,11 @@
+llama-cpp-python
+cached_property
+fastapi
+uvicorn
+pypdf
+torch
+sentence_transformers
+canals
+python-dotenv
+python-multipart
+farm-haystack[weaviate]
