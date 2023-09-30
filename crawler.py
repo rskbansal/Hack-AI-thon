@@ -6,6 +6,9 @@ def get_content_and_links(url):
     response = requests.get(url)
     if response.status_code != 200:
         return "", []
+    
+    if not response.headers['Content-Type'].startswith('text/html'):
+        return "", []
 
     soup = BeautifulSoup(response.text, 'html.parser')
     
@@ -26,6 +29,7 @@ def get_content_and_links(url):
         link_url = link['href']
         # print(link_url)
         # Skip links that only contain fragments or just the root
+
         if link_url == '/' or link_url.startswith('/#'):
             continue
 
@@ -40,7 +44,7 @@ def save_text_to_file(text, url):
     # Use the hash of the URL to create a unique filename
     filename = 'data/' + hashlib.md5(url.encode()).hexdigest() + '.txt'
     with open(filename, 'w', encoding='utf-8') as file:
-        file.write(url + '\n\n\n' + text)
+        file.write(text)
 
 def fetch_recursive(url, base_url, depth=2, visited=None):
     if depth == 0 or (visited and url in visited):
@@ -49,6 +53,7 @@ def fetch_recursive(url, base_url, depth=2, visited=None):
     if visited is None:
         visited = set()
 
+    print(url)
     visited.add(url)
     text, links = get_content_and_links(url)
     save_text_to_file(text, url)
@@ -56,5 +61,5 @@ def fetch_recursive(url, base_url, depth=2, visited=None):
         fetch_recursive(link, base_url, depth=depth-1, visited=visited)
 
 # Example
-base_url = 'https://www.moveworks.com'
-fetch_recursive(base_url, base_url, depth=2)
+base_url = 'https://www.moveworks.com/sitemap'
+fetch_recursive(base_url, base_url, depth=3)
