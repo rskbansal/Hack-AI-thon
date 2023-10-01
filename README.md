@@ -32,6 +32,11 @@ cd Hack-AI-thon
 ```shell
 docker compose up -d
 ```
+- Create a virtual environment
+```shell
+python -m venv venv
+./venv/Scripts/activate
+```
 - Install the `requirements.py` file
 ```shell
 pip install -r requirements.txt
@@ -42,11 +47,6 @@ git clone https://github.com/deepset-ai/haystack.git
 cd haystack
 pip install --editable .
 cd ..
-```
-- Create a virtual environment
-```shell
-python -m venv venv
-./venv/Scripts/activate
 ```
 - Run the required files
 ```shell
