@@ -23,3 +23,37 @@ The LLMs supported  for generation are:
    [Link to download model](https://huggingface.co/TheBloke/Llama-2-13B-GGUF/blob/main/llama-2-13b.Q4_K_S.gguf)
 
 The LM used for generating embeddings is [MiniLM-L6](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+
+
+## INSTALLATION
+- Clone this repository
+    ```shell
+    git clone https://github.com/rskbansal/Hack-AI-thon.git
+    cd Hack-AI-thon
+    ```
+- Build the docker image
+    ```shell
+    docker compose up -d
+    ```
+- Install the `requirements.py` file
+    ```shell
+    pip install -r requirements.txt
+    ```
+- Install `haystack`
+    ```shell
+    git clone https://github.com/deepset-ai/haystack.git
+    cd haystack
+    pip install --editable .
+    cd ..
+    ```
+- Create a virtual environment
+    ```shell
+    python -m venv venv
+    ./venv/Scripts/activate
+    ```
+- Run the required files
+    ```shell
+    python ingest.py
+    python app.py
+    ```
+- Open the [instance](https://localhost:8001) in your browser
