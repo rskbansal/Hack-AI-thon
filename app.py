@@ -17,7 +17,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 
 print("Import Successfully")
 
@@ -50,8 +50,8 @@ def get_result(query):
             max_length=512
         )
     model = initialize_model()
-    prompt_node = PromptNode(model_name_or_path = model, # "gpt-3.5-turbo",
-                            # api_key = OPENAI_API_KEY,
+    prompt_node = PromptNode(model_name_or_path = "gpt-3.5-turbo", # model
+                            api_key = OPENAI_API_KEY,
                             max_length=1000,
                             default_prompt_template = prompt_template)
     print("Prompt Node: ", prompt_node)
