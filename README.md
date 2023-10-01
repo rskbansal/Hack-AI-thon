@@ -27,33 +27,33 @@ The LM used for generating embeddings is [MiniLM-L6](https://huggingface.co/sent
 
 ## INSTALLATION
 - Clone this repository
-    ```shell
-    git clone https://github.com/rskbansal/Hack-AI-thon.git
-    cd Hack-AI-thon
-    ```
+```shell
+git clone https://github.com/rskbansal/Hack-AI-thon.git
+cd Hack-AI-thon
+```
 - Build the docker image
-    ```shell
-    docker compose up -d
-    ```
+```shell
+docker compose up -d
+```
 - Install the `requirements.py` file
-    ```shell
-    pip install -r requirements.txt
-    ```
+```shell
+pip install -r requirements.txt
+```
 - Install `haystack`
-    ```shell
-    git clone https://github.com/deepset-ai/haystack.git
-    cd haystack
-    pip install --editable .
-    cd ..
-    ```
+```shell
+git clone https://github.com/deepset-ai/haystack.git
+cd haystack
+pip install --editable .
+cd ..
+```
 - Create a virtual environment
-    ```shell
-    python -m venv venv
-    ./venv/Scripts/activate
-    ```
+```shell
+python -m venv venv
+./venv/Scripts/activate
+```
 - Run the required files
-    ```shell
-    python ingest.py
-    python app.py
-    ```
+```shell
+python ingest.py
+python app.py
+```
 - Open the [instance](https://localhost:8001) in your browser
