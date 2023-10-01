@@ -62,4 +62,4 @@ def fetch_recursive(url, base_url, depth=2, visited=None):
 
 # Example
 base_url = 'https://www.moveworks.com/sitemap'
-fetch_recursive(base_url, base_url, depth=4)
+fetch_recursive(base_url, base_url, depth=3)
